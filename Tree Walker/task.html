@@ -1,0 +1,161 @@
+<h2>Tree Walker</h2>
+<p align="justify">
+ This summer the 4th annual
+ <a href="https://pybay.com/" target="_blank" title="PyBay website">
+  PyBay
+ </a>
+ conference dedicated to Python development was held.
+    One of the speakers was
+ <a href="https://twitter.com/raymondh" target="_blank" title="Raymond's twitter">
+  Raymond Hettinger
+ </a>
+ ,
+    a member of the Python Software Foundation (PFS) since 2003, a member of the PFS board of directors from 2008 to 2012.
+    Raymond's merits in the PFS are very significant: he worked on creating sets (data type), generator expressions,
+    "collections" and "itertools" modules, as well as an ordered dict. He's also well known for his contributions
+    to the Python Cookbook.
+</p>
+<p align="justify">
+ Raymond's presentation was called "The Mental Game of Python".
+    You can watch the entire recording of the presentation
+ <a href="https://www.youtube.com/watch?v=UANN2Eu6ZnM" target="_blank" title="youtube video">
+  here
+ </a>
+ .
+    Raymond demonstrated using various strategies to simplify the development process and make the code simpler and therefore better.
+    This mission is a variation of a data tree traversal task used by Raymond to demonstrate an incremental development approach.
+</p>
+<p align="justify">
+ In computer science, a
+ <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" target="_blank" title="Tree on Wiki">
+  tree
+ </a>
+ is an abstract data type that simulates a hierarchical tree structure.
+    All tree elements are called
+ <b>
+  nodes
+ </b>
+ . The lines connecting elements (or nodes) are called
+ <b>
+  branches
+ </b>
+ and nodes without children are called
+ <b>
+  leaves
+ </b>
+ or
+ <b>
+  end-nodes
+ </b>
+ .
+    The topmost node in a tree is called the
+ <b>
+  root node
+ </b>
+ .
+ <b>
+  Depth
+ </b>
+ is the distance between a node and the root.
+    Additionally, every node in a tree can be seen as the root node of the
+ <b>
+  subtree
+ </b>
+ rooted at that node.
+</p>
+<br/>
+<p style="text-align: right;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/a203296ed18a4bf0b738f410618a484f/example.png" style="max-height: 300px" title="an arbitrary tree"/>
+</p>
+<br/>
+<p align="justify">
+ In this mission you are given an arbitrary finite tree and a target. In case the target's type is
+ <b>
+  int
+ </b>
+ or
+ <b>
+  str
+ </b>
+ your task is to calculate how many leaves of the tree are equal to the target.
+    Otherwise, if the target's type is
+ <b>
+  list
+ </b>
+ or
+ <b>
+  dict
+ </b>
+ you need to calculate the number of subtrees which are equal to the target.
+ <br/>
+ <br/>
+ For a better understanding, have a look at the illustrations below (visual order matters for lists).
+    If encounter difficulties, try to watch this part of the
+ <a href="https://youtu.be/UANN2Eu6ZnM?t=1354" target="_blank" title="video">
+  video
+ </a>
+ exposing the use of the incremental development approach.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments:
+ <ul>
+  <li>
+   the first is an arbitrary finite
+   <b>
+    tree
+   </b>
+   data structure
+  </li>
+  <li>
+   the second is a
+   <b>
+    target
+   </b>
+   , any type of [int, str, list, dict]
+  </li>
+ </ul>
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The number (integer) of the leaves or subtrees that are equal to the given target.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">
+tree_walker(tree=[1, "2", 3, [[3], 1, {1: "one"}]], target=1) == 2                                        #example #1
+tree_walker(tree={"one": 1, "two": [{1: "one", 2: "two"}, 1, "1", "one"]}, target=1) == 2                 #example #2
+tree_walker(tree={"one": [1, 2], "two": [{1: "one", 2: "two"}, [1, 2], "1", "one"]}, target=[1, 2]) == 2  #example #3
+tree_walker(tree=5, target=5) == 1                                                                        #example #4
+</pre>
+ 
+</div>
+<p style="text-align: right;">
+ <img alt="samples" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/a203296ed18a4bf0b738f410618a484f/samples.png" style="max-height: 300px" title="examples"/>
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <br/>
+ <ul>
+  <li>
+   n ∈ [1; 100] - nodes number
+  </li>
+  <li>
+   any node of a given tree may be any type of [int, str, list, dict]
+  </li>
+ </ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/tree-walker">See the task on CheckiO</a></p>

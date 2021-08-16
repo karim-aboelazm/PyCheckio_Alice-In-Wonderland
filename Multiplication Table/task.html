@@ -1,0 +1,871 @@
+<h2>Multiplication Table</h2>
+<style type="text/css">
+ .story .shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+
+        /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+    }
+
+    .t-example {
+        text-align: center;
+        margin: 0 auto 0 auto;
+    }
+
+    .t-example tr:first-child td{
+        border-bottom: solid #294270 2px;
+    }
+
+    .t-example tr:last-child td {
+        border-top: solid #294270 2px;
+    }
+    
+    .t-example td .operation {
+        border-collapse: collapse;
+        margin: 5px;
+
+    }
+
+    .t-example td {
+        color: #294270;
+    }
+    
+    .t-example td .operation td {
+        border: solid #294270 1px;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 2px;
+        color: #294270;
+    }
+
+    .t-example td .operation tr:first-child td {
+        border: none;
+    }
+
+    .t-example td .operation tr:last-child td,
+    .t-example td .operation tr td.td-sum
+    {
+        border-bottom: none;
+    }
+
+    .t-example td .operation tr td:first-child {
+        border-left: none;
+    }
+
+    .t-example td .operation tr td:last-child {
+        border-right: none;
+    }
+
+
+
+    .td-header {
+        font-size: 20px;
+    }
+
+    .td-result {
+        font-size: 16px;
+    }
+</style>
+<div class="story" style="margin-bottom: 0">
+ <img class="shadow" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/9903274358d64688bb7dad75ce2864e4/alice-sepia.png" width="320px"/>
+ <p style="padding-top: 20px;">
+  Alice took up the fan and gloves, and, as the hall was very
+        hot, she kept fanning herself all the time she went on talking:
+        'Dear, dear! How queer everything is to-day! And yesterday
+        things went on just as usual. I wonder if I've been changed in
+        the night? Let me think: was I the same when I got up this
+        morning? I almost think I can remember feeling a little
+        different. But if I'm not the same, the next question is, Who in
+        the world am I? Ah, THAT'S the great puzzle!' And she began
+        thinking over all the children she knew that were of the same age
+        as herself, to see if she could have been changed for any of
+        them.
+ </p>
+ <p>
+  "I'm sure I'm not Ada," she said, "for her hair goes in such
+        long ringlets, and mine doesn't go in ringlets at all; and I'm
+        sure I can't be Mabel, for I know all sorts of things, and she,
+        oh! she knows such a very little! Besides, SHE'S she, and I'm I,
+        and--oh dear, how puzzling it all is! I'll try if I know all the
+        things I used to know. Let me see: four times five is twelve,
+        and four times six is thirteen, and four times seven is--oh dear!
+        I shall never get to twenty at that rate! However, the
+        Multiplication Table doesn't signify:...
+ </p>
+ <p style="float: right">
+  "Alice's Adventures in Wonderland." Lewis Carroll
+ </p>
+ <p style="clear: both;">
+ </p>
+</div>
+<p>
+ After reading "Alice's Adventures in Wonderland,"
+    our robots decided to create their own "Multiplication table."
+    Stephan would lead this mission (yeah, that probably was a bad idea).
+    He forgot how to do multiplication and tried to invent a new method.
+    It’s a rather strange method if we may be so blunt.
+</p>
+<p>
+ In Stephan's version of multiplication, we convert numbers to binary representation without leading zeroes.
+    Then the first number is written vertically (up to down) and the second horizontally (left to right).
+    With that, we fill a table with various binary operations for each crossing -- AND, OR, XOR, so we end up with three tables.
+    In each table we convert rows to decimal and summarize it,
+    then summarize the results of three tables. Let's look at several examples.
+</p>
+<table class="t-example">
+ <tr>
+  <td class="td-header" colspan="3">
+   4 x 6 =
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="6">
+      AND
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      dec
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      6
+     </td>
+     <td class="td-sum" rowspan="3">
+      6
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="6">
+      OR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      dec
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      7
+     </td>
+     <td class="td-sum" rowspan="3">
+      19
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      6
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      6
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="6">
+      XOR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td class="td-sum" rowspan="3">
+      13
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      6
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      6
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+ <tr>
+  <td class="td-result" colspan="3">
+   6 + 19 + 13 =
+   <strong>
+    38
+   </strong>
+  </td>
+ </tr>
+</table>
+<p>
+</p>
+<table class="t-example">
+ <tr>
+  <td class="td-header" colspan="3">
+   2 x 7 =
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="6">
+      AND
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      dec
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      7
+     </td>
+     <td class="td-sum" rowspan="3">
+      7
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="6">
+      OR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      dec
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      7
+     </td>
+     <td class="td-sum" rowspan="3">
+      14
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      7
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="6">
+      XOR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      0
+     </td>
+     <td class="td-sum" rowspan="3">
+      7
+     </td>
+    </tr>
+    <tr>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      7
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+ <tr>
+  <td class="td-result" colspan="3">
+   7 + 14 + 7 =
+   <strong>
+    28
+   </strong>
+  </td>
+ </tr>
+</table>
+<p>
+</p>
+<table class="t-example">
+ <tr>
+  <td class="td-header" colspan="3">
+   7 x 2 =
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="5">
+      AND
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      dec
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      2
+     </td>
+     <td class="td-sum" rowspan="3">
+      6
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      2
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      2
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="5">
+      OR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      dec
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      3
+     </td>
+     <td class="td-sum" rowspan="3">
+      9
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      3
+     </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+   <table class="operation">
+    <tr>
+     <td colspan="5">
+      XOR
+     </td>
+    </tr>
+    <tr>
+     <td>
+      X
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      sum
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+     <td class="td-sum" rowspan="3">
+      3
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+    </tr>
+    <tr>
+     <td>
+      1
+     </td>
+     <td>
+      0
+     </td>
+     <td>
+      1
+     </td>
+     <td>
+      1
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+ <tr>
+  <td class="td-result" colspan="3">
+   6 + 9 + 3 =
+   <strong>
+    18
+   </strong>
+  </td>
+ </tr>
+</table>
+<p>
+ You should help Stephan write a function to calculate this "multiplication".
+    You are given two positive integers (n &gt; 0), be careful with order of arguments.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments as integers.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The result of the Stephan's "multiplication", an integer.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+checkio(4, 6) == 38
+checkio(2, 7) == 28
+checkio(7, 2) == 18
+    </pre>
+</div>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ In this task we play around with logical binary operations, the basis for computer science.
+    Maybe you can find a use for this subject in cryptography?
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ 0 &lt; x &lt; 100
+ <br/>
+ 0 &lt; y &lt; 100
+ <br/>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/multiplication-table">See the task on CheckiO</a></p>

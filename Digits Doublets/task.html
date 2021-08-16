@@ -1,0 +1,150 @@
+<h2>Digits Doublets</h2>
+<style type="text/css">
+ .story .shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+
+        /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+
+    }
+
+    .story .left {
+        float: left;
+    }
+
+    .story .right {
+        float: right;
+
+    }
+
+    .story .title {
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+    }
+</style>
+<div class="for_info_only" style="position: relative;">
+ <div class="story" style="margin-bottom: 20px">
+  <img class="shadow left" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/be1d43a00eb34973949a234c1b779cf9/alice-queen-sepia.png" width="220px"/>
+  <p>
+   ...'And as for YOU,' she went on, turning fiercely upon the Red Queen, whom
+            she considered as the cause of all the mischief--but the Queen was no
+            longer at her side--she had suddenly dwindled down to the size of a
+            little doll, and was now on the table, merrily running round and round
+            after her own shawl, which was trailing behind her.
+  </p>
+  <p>
+   At any other time, Alice would have felt surprised at this, but she was
+            far too much excited to be surprised at anything NOW. 'As for YOU,'
+            she repeated, catching hold of the little creature in the very act of
+            jumping over a bottle which had just lighted upon the table, 'I'll shake
+            you into a kitten, that I will!'
+  </p>
+  <img class="shadow right" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/be1d43a00eb34973949a234c1b779cf9/alice-kitty-sepia.png" width="220px"/>
+  <p class="title">
+   CHAPTER X. Shaking
+  </p>
+  <p>
+   She took her off the table as she spoke, and shook her backwards and
+            forwards with all her might.
+
+            The Red Queen made no resistance whatever; only her face grew very
+            small, and her eyes got large and green: and still, as Alice went on
+            shaking her, she kept on growing shorter--and fatter--and softer--and
+            rounder--and--
+  </p>
+  <p class="title">
+   CHAPTER XI. Waking
+  </p>
+  <p>
+   --and it really WAS a kitten, after all.
+  </p>
+  <p style="float: right">
+   "Through the Looking-Glass." Lewis Carroll
+  </p>
+  <div style="clear: both;">
+  </div>
+ </div>
+</div>
+<p>
+ Doublets, sometimes known as Word ladder, is a word game invented by Charles Dodgson (aka Lewis Carroll).
+    A doublets puzzle begins with two words.
+    To solve the puzzle one must find a chain of different words to link the two together such that the two adjacent words
+    differ by one letter.
+</p>
+<p>
+ For Example:
+ <strong>
+  FLOUR
+ </strong>
+ ⇒ FLOOR ⇒ FLOOD ⇒ BLOOD ⇒
+    BROOD ⇒ BROAD ⇒
+ <strong>
+  BREAD
+ </strong>
+</p>
+<p>
+ The Robots like using digits more than letters, so we’ve changed the rules a little.
+    You are given the list of numbers with exactly the same length and you must find the shortest chain of numbers
+    to link the first number to the last like you would with the words.
+</p>
+<p>
+ For Example. There is a list [123, 991, 323, 321, 329, 121, 921, 125, 999].
+    The shortest way from the first to the last is:
+ <strong>
+  123
+ </strong>
+ ⇒ 121 ⇒ 921 ⇒ 991 ⇒
+ <strong>
+  999
+ </strong>
+</p>
+<p>
+ You should write a function that receives a list of numbers (positive integers) and
+    returns the shortest route as a list of numbers.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Numbers as a list of integers.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The shortest chain from the first to the last number as a list of integers.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+checkio([123, 991, 323, 321, 329, 121, 921, 125, 999]) == [123, 121, 921, 991, 999]
+checkio([111, 222, 333, 444, 555, 666, 121, 727, 127, 777]) == [111, 121, 127, 727, 777]
+checkio([456, 455, 454, 356, 656, 654]) == [456, 454, 654]  # or [456, 656, 654]
+    </pre>
+</div>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ This task is like pathfinding for numbers.
+    It shows how many things in this world can be represented with mathematics, even words.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ Numbers have the same length
+ <br/>
+ ∀ x ∈ numbers : 100 ≤ x &lt; 1000
+ <br/>
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/digits-doublets">See the task on CheckiO</a></p>

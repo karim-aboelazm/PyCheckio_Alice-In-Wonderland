@@ -1,0 +1,65 @@
+<h2>Zigzag Array</h2>
+<!-- Describe task in general -->
+<p>
+ This function creates an List of lists. that represents a two-dimensional grid with the given number of rows and  cols. This grid should contain the integers from
+ <code>
+  start
+ </code>
+ to
+ <code>
+  start + rows * cols - 1
+ </code>
+ in ascending order, but the elements of every odd-numbered row have to be listed in descending order, so that when read in ascending order, the numbers zigzag through the two-dimensional grid.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two ints rows and cols. One optional argument start.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ List of lists.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">
+create_zigzag(3, 5) == [
+        [1,2,3,4,5],
+        [10,9,8,7,6],
+        [11,12,13,14,15]
+    ]
+create_zigzag(5, 1) == [
+        [1],
+        [2],
+        [3],
+        [4],
+        [5]
+    ]
+create_zigzag(3, 3, 5) == [
+        [5, 6, 7],
+        [10, 9, 8],
+        [11, 12, 13]
+    ]
+</pre>
+ 
+</div>
+<p>
+ <i>
+  The mission was taken from Python CCPS 109 Fall 2018. It is taught for Ryerson Chang School of Continuing Education by
+  <a href="http://www.scs.ryerson.ca/~ikokkari/">
+   Ilkka Kokkarinen
+  </a>
+ </i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/zigzag-array">See the task on CheckiO</a></p>

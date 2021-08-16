@@ -1,0 +1,72 @@
+<h2>Flood Area</h2>
+<p>
+ Your task is to simulate a flood damage.
+</p>
+<p>
+ You are given a cross-section diagram (a string).
+It represents slopes and flatlands by '/', '\' and '_' respectively. For example, the region of the following picture is shown by a string "/\\///\_/\/\\\\/_/\\///__\\\_\\/_\/_/".
+</p>
+<p>
+ Assume that the rain is falling endlessly and the water overflowing from the region is falling into the sea from both sides.
+In the following example the rain will create floods in 4, 2, 1, 19 and 9 areas respectively.
+</p>
+<p>
+ You should return a list (or an iterable) of the numbers of floods from the left side of the cross-section diagram.
+If there aren’t any  floods, return [] (or an empty iterable).
+</p>
+<img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/fb915d4f01be4da19f63231594e1775a/example_01.png" title="example"/>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python" style="font-family:'Courier New',Courier;">
+list(flood_area(r'\\//')) == [4]
+list(flood_area(r'/\\///\_/\/\\\\/_/\\///__\\\_\\/_\/_/')) == [4, 2, 1, 19, 9]
+list(flood_area(r'_/_\_')) == []
+</pre>
+ 
+</div>
+<p>
+ <strong>
+  Input:
+ </strong>
+ 
+A cross-section diagram (a string).
+
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The numbers of floods (a list/iterable of integers).
+</p>
+<!--
+<p>
+<strong>How it is used:</strong><br>
+</p>
+-->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <br/>
+ <ul>
+  <li>
+   1 ≤ len(diagram) ≤ 500
+  </li>
+ </ul>
+</p>
+<p>
+ <i>
+  The mission was taken from
+  <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_D">
+   AIZU ONLINE JUDGE(ALDS1_3_D: Areas on the Cross-Section Diagram).
+  </a>
+ </i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/flood-area">See the task on CheckiO</a></p>

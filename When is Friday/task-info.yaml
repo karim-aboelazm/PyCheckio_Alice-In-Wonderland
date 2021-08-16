@@ -1,0 +1,34 @@
+type: checkiO
+custom_name: When is Friday?
+files:
+- name: mission.py
+  visible: true
+  text: |
+    def friday(day):
+        #replace this for solution
+        return 0
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(friday('23.04.2018'))
+
+        #These "asserts" using only for self-checking and not necessary for auto-testing
+        assert friday('23.04.2018') == 4
+        assert friday('01.01.1999') == 0
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+  learner_created: false
+status: Unchecked
+code: |
+  def friday(day):
+      #replace this for solution
+      return 0
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(friday('23.04.2018'))
+
+      #These "asserts" using only for self-checking and not necessary for auto-testing
+      assert friday('23.04.2018') == 4
+      assert friday('01.01.1999') == 0
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+seconds_from_change: 9223372036854775807

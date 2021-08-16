@@ -1,0 +1,171 @@
+<h2>YAML. Complex Structure</h2>
+<!-- Describe task in general -->
+<p>
+ The 4th task in the series of missions about the YAML format will be devoted to a complex structure.
+</p>
+<p>
+ An array element can be another array.
+</p>
+<pre>
+- Alex
+-
+  - odessa
+  - dnipro
+- Li
+</pre>
+<pre>
+[
+  "Alex", 
+  [
+    "odessa", 
+    "dnipro"
+  ], 
+  "Li"
+]
+</pre>
+<p>
+ A dictionary can also be an element of an array.
+</p>
+<pre>
+- 67
+-
+  name: Irv
+  game: Mario
+-
+- 56
+
+</pre>
+<pre>
+[
+  67, 
+  {
+    "game": "Mario", 
+    "name": "Irv"
+  }, 
+  null, 
+  56
+]
+</pre>
+<p>
+ A dictionary element can be another dictionary.
+</p>
+<pre>
+name: Alex
+study:
+  type: school
+  number: 78
+age: 14
+</pre>
+<pre>
+{
+  "age": 14, 
+  "study": {
+    "type": "school", 
+    "number": 78
+  }, 
+  "name": "Alex"
+}
+</pre>
+<p>
+ An array can also be an element of a dictionary.
+</p>
+<pre>
+name: Alex
+study:
+  - 89
+  - 89
+  - "Hell"
+age: 14
+</pre>
+<pre>
+{
+  "age": 14, 
+  "study": [
+    89, 
+    89, 
+    "Hell"
+  ], 
+  "name": "Alex"
+}
+</pre>
+<p>
+ And, of course, data can have more than one nesting level.
+</p>
+<pre>
+name: Alex
+study:
+  -
+    type: school
+    num: 89
+  -
+    type: school
+    num: 12
+age: 14
+</pre>
+<pre>
+{
+  "age": 14, 
+  "study": [
+    {
+      "num": 89, 
+      "type": "school"
+    }, 
+    {
+      "num": 12, 
+      "type": "school"
+    }
+  ], 
+  "name": "Alex"
+}
+</pre>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Format string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ An object.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">yaml('- Alex\n'
+ '-\n'
+ '  - odessa\n'
+ '  - dnipro\n'
+ '- Li') == ['Alex', ['odessa', 'dnipro'], 'Li']
+yaml('- 67\n'
+ '-\n'
+ '  name: Irv\n'
+ '  game: Mario\n'
+ '-\n'
+ '- 56') == [67,
+ {'game': 'Mario', 'name': 'Irv'},
+ None,
+ 56]
+</pre>
+ 
+</div>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  The YAML 1.2 standard is being used.
+ </i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/yaml-complex-structure">See the task on CheckiO</a></p>

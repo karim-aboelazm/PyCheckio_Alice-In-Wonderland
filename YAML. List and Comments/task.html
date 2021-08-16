@@ -1,0 +1,95 @@
+<h2>YAML. List and Comments</h2>
+<!-- Describe task in general -->
+<p>
+ In the 3rd YAML parsing task, we’re going to look into arrays.
+</p>
+<p>
+ <i>
+  (Remember that in this mission you must take into account the conditions of previous missions. It means that your solution should work with dictionaries from a previous mission and with arrays from this one.)
+ </i>
+</p>
+<p>
+ A simple example:
+</p>
+<pre>
+- write some
+- "Alex Chii"
+- 89
+</pre>
+<pre>
+[
+  "write some", 
+  "Alex Chii", 
+  89
+]
+</pre>
+<p>
+ As you can see in the above example, the format for values is the same as we’ve used in the previous task for the format of values in the dictionary.
+</p>
+<p>
+ It's time to add comments to the format.
+</p>
+<p>
+ Everything indicated after the # sign should be ignored by the parser.
+</p>
+<pre>
+# comment
+- write some # after
+# one mor
+- "Alex Chii #sir "
+- 89 #bl
+</pre>
+<pre>
+[
+  "write some", 
+  "Alex Chii #sir ", 
+  89
+]
+</pre>
+<p>
+ As you may have noticed, the comments inside the string aren’t considered as comments, they are treated as part of the string, which makes sense.
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Format string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ An object.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">
+  yaml('- write some\n- "Alex Chii"\n- 89') == ['write some', 'Alex Chii', 89]
+  yaml('# comment\n'
+ '- write some # after\n'
+ '# one mor\n'
+ '- "Alex Chii #sir "\n'
+ '- 89 #bl') == ['write some', 'Alex Chii #sir ', 89]
+</pre>
+ 
+</div>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  The YAML 1.2 standard is being used.
+ </i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/yaml-list-and-comments">See the task on CheckiO</a></p>

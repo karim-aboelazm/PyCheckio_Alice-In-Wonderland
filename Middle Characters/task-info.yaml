@@ -1,0 +1,21 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def middle(text):\n    #replace this for solution\n    return text\n\nif\
+    \ __name__ == '__main__':\n    print(\"Example:\")\n    print(middle('example'))\n\
+    \n    #These \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+    \    assert middle('example') == 'm'\n    assert middle('test') == 'es'    \n\
+    \    assert middle('very-very long sentence') == 'o'\n    assert middle('I') ==\
+    \ 'I'\n    assert middle('no') == 'no'\n    print(\"Coding complete? Click 'Check'\
+    \ to earn cool rewards!\")\n"
+  learner_created: false
+status: Unchecked
+code: "def middle(text):\n    #replace this for solution\n    return text\n\nif __name__\
+  \ == '__main__':\n    print(\"Example:\")\n    print(middle('example'))\n\n    #These\
+  \ \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+  \    assert middle('example') == 'm'\n    assert middle('test') == 'es'    \n  \
+  \  assert middle('very-very long sentence') == 'o'\n    assert middle('I') == 'I'\n\
+  \    assert middle('no') == 'no'\n    print(\"Coding complete? Click 'Check' to\
+  \ earn cool rewards!\")\n"
+seconds_from_change: 9223372036854775807
